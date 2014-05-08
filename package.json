@@ -1,0 +1,12 @@
+{
+  "name": "hintify",
+  "version": "0.1.0",
+  "description": "jshint in a browserify transform",
+  "main": "index.js",
+  "dependencies": {
+    "through": "^2.3.4",
+    "jshint": "^2.5.0"
+  },
+  "license": "BSD",
+  "keywords": ["browserify-transform"]
+}
