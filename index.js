@@ -23,7 +23,10 @@ module.exports = function(file) {
                 delete config.dirname;
 
                 if (!JSHINT(data, config, config.globals)) {
-                    this.emit('error', JSHINT.errors.map(formatError).join('\n'));
+                    var error = new Error();
+                    error.name = 'LintingError';
+                    error.message = JSHINT.errors.map(formatError).join('\n');
+                    this.emit('error', error);
                 }
             }
 
